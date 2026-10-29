@@ -1,0 +1,26 @@
+[project]
+name = "data-analysis-course"
+version = "0.1.0"
+description = "Курс «Введение в анализ данных и программирование на Python»: подготовка и очистка данных"
+authors = [{ name = "Илья", email = "leriar92@strafemail.com" }]
+readme = "README.md"
+requires-python = "==3.12.14"
+dependencies = ["pandas (>=3.1.0,<4.0.0)", "polars (>=2.1.0,<3.0.0)", "pyarrow (>=26.0.0,<27.0.0)", "sqlalchemy (>=2.1.6,<3.0.0)", "psycopg2-binary (>=2.9.13,<3.0.0)", "python-dotenv (>=1.2.4,<2.0.0)", "matplotlib (>=3.11.2,<4.0.0)", "pycountry (>=26.2.16,<27.0.0)", "psutil (>=7.2.2,<8.0.0)"]
+
+[tool.poetry]
+package-mode = false
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "jupyter (>=1.1.1,<2.0.0)",
+    "ruff (>=0.17.3,<0.18.0)",
+    "ipykernel (>=7.4.0,<8.0.0)"
+]
