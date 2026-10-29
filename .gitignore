@@ -1,0 +1,24 @@
+# окружение
+.venv/
+venv/
+
+# данные и результаты работы программы
+data/
+logs/
+*.db
+*.sqlite3
+*.parquet
+*.feather
+*.pkl
+
+# служебные файлы Python и Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.ruff_cache/
+
+# реквизиты доступа
+.env
+
+# служебные файлы редакторов
+.idea/
