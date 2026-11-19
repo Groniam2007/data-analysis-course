@@ -1,0 +1,16 @@
+{
+  "full_equal": true,
+  "full_sha256": "63404f1b123c94e5446dc3d92f9faf76a598187b9a154170745633f9febc7a65",
+  "previous_full_sha256": "63404f1b123c94e5446dc3d92f9faf76a598187b9a154170745633f9febc7a65",
+  "sample_all_equal": true,
+  "sample_tables": {
+    "alternate_names_sample.parquet": true,
+    "clean_sample.parquet": true,
+    "countries_sample.parquet": true,
+    "geoname_cc2_sample.parquet": true,
+    "health_indicators_sample.parquet": true,
+    "indicators_sample.parquet": true,
+    "wdi_values_sample.parquet": true
+  },
+  "sample_csv_equal": true
+}

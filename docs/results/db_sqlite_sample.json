@@ -1,0 +1,421 @@
+{
+  "target": "sqlite",
+  "sample": true,
+  "load_seconds": 14.33865029993467,
+  "tables": {
+    "regions": 0.013370699947699904,
+    "income_levels": 0.014562699943780899,
+    "countries": 0.014913300052285194,
+    "feature_classes": 0.0122146001085639,
+    "feature_codes": 0.020400899928063154,
+    "timezones": 0.01371339987963438,
+    "geonames": 1.5544683001935482,
+    "alternate_names": 1.081767699914053,
+    "geoname_cc2": 0.040983900194987655,
+    "health_indicators": 0.07180289993993938,
+    "indicators": 0.016188399866223335,
+    "wdi_values": 11.481350800022483
+  },
+  "rows": {
+    "regions": 7,
+    "income_levels": 5,
+    "countries": 245,
+    "feature_classes": 9,
+    "feature_codes": 492,
+    "timezones": 411,
+    "geonames": 199999,
+    "alternate_names": 274493,
+    "geoname_cc2": 5610,
+    "health_indicators": 5275,
+    "indicators": 345,
+    "wdi_values": 2164071
+  },
+  "storage_mb": 191.546875,
+  "index_seconds": 1.4132900000549853,
+  "queries_before_index": {
+    "count": {
+      "median": 0.0206924001686275,
+      "runs": [
+        0.02189990016631782,
+        0.020497199846431613,
+        0.0206924001686275
+      ],
+      "rows": 1
+    },
+    "aggregate": {
+      "median": 0.16037410008721054,
+      "runs": [
+        0.1613552998751402,
+        0.16037410008721054,
+        0.1508743001613766
+      ],
+      "rows": 9
+    },
+    "date_range": {
+      "median": 0.04315640009008348,
+      "runs": [
+        0.041198400082066655,
+        0.04315640009008348,
+        0.0442389000672847
+      ],
+      "rows": 96
+    },
+    "region_join": {
+      "median": 0.18013480002991855,
+      "runs": [
+        0.18013480002991855,
+        0.18013560003601015,
+        0.17980089993216097
+      ],
+      "rows": 7
+    },
+    "samples": {
+      "count": [
+        [
+          199999
+        ]
+      ],
+      "aggregate": [
+        [
+          "P",
+          79180,
+          321.14104554865423,
+          45694768
+        ],
+        [
+          "S",
+          40820,
+          382.5828701498068,
+          58856
+        ],
+        [
+          "H",
+          37691,
+          682.3611142955406,
+          235
+        ],
+        [
+          "T",
+          27050,
+          1134.1183396226415,
+          35947
+        ],
+        [
+          "L",
+          7001,
+          318.5847152126893,
+          501519623
+        ],
+        [
+          "A",
+          6402,
+          338.8315450643777,
+          180717495
+        ],
+        [
+          "V",
+          767,
+          509.28,
+          43
+        ],
+        [
+          "R",
+          742,
+          658.0943396226415,
+          null
+        ],
+        [
+          "U",
+          265,
+          -1234.4,
+          null
+        ]
+      ],
+      "date_range": [
+        [
+          1764,
+          "Ad Darbāshīyah",
+          null
+        ],
+        [
+          9211,
+          "Bāstīk",
+          null
+        ],
+        [
+          29644,
+          "Khāvar-e Bālā",
+          null
+        ],
+        [
+          29654,
+          "Kūh-e Kamar Khīd",
+          null
+        ],
+        [
+          29686,
+          "Kalāteh-ye Chāhak",
+          null
+        ],
+        [
+          29691,
+          "Kūh-e Kamar Alang",
+          null
+        ],
+        [
+          30026,
+          "Cheshmeh Sefīd",
+          null
+        ],
+        [
+          32061,
+          "Eslāmābād-e Soflá",
+          null
+        ],
+        [
+          117576,
+          "Kūh-e Sangān",
+          null
+        ],
+        [
+          123128,
+          "Mozdābād-e Qadīm",
+          null
+        ]
+      ],
+      "region_join": [
+        [
+          "Europe & Central Asia",
+          46930,
+          7219623
+        ],
+        [
+          "North America",
+          44219,
+          1585873
+        ],
+        [
+          "East Asia & Pacific",
+          39677,
+          36890000
+        ],
+        [
+          "Latin America & Caribbean",
+          19876,
+          7989415
+        ],
+        [
+          "Middle East, North Africa, Afghanistan & Pakistan",
+          17369,
+          3043532
+        ],
+        [
+          "Sub-Saharan Africa",
+          15190,
+          10601345
+        ],
+        [
+          "South Asia",
+          14561,
+          4487379
+        ]
+      ]
+    },
+    "date_range_plan": [
+      "(2, 0, 216, 'SCAN geonames')"
+    ]
+  },
+  "queries_after_index": {
+    "count": {
+      "median": 0.002196399960666895,
+      "runs": [
+        0.002586000133305788,
+        0.002196399960666895,
+        0.0021162000484764576
+      ],
+      "rows": 1
+    },
+    "aggregate": {
+      "median": 0.3159863001201302,
+      "runs": [
+        0.3159863001201302,
+        0.3175182999111712,
+        0.31496139988303185
+      ],
+      "rows": 9
+    },
+    "date_range": {
+      "median": 0.0007094000466167927,
+      "runs": [
+        0.0008103998843580484,
+        0.0007094000466167927,
+        0.0003310998436063528
+      ],
+      "rows": 96
+    },
+    "region_join": {
+      "median": 0.13991349982097745,
+      "runs": [
+        0.13991349982097745,
+        0.14150670007802546,
+        0.13928589993156493
+      ],
+      "rows": 7
+    },
+    "samples": {
+      "count": [
+        [
+          199999
+        ]
+      ],
+      "aggregate": [
+        [
+          "P",
+          79180,
+          321.14104554865423,
+          45694768
+        ],
+        [
+          "S",
+          40820,
+          382.5828701498068,
+          58856
+        ],
+        [
+          "H",
+          37691,
+          682.3611142955406,
+          235
+        ],
+        [
+          "T",
+          27050,
+          1134.1183396226415,
+          35947
+        ],
+        [
+          "L",
+          7001,
+          318.5847152126893,
+          501519623
+        ],
+        [
+          "A",
+          6402,
+          338.8315450643777,
+          180717495
+        ],
+        [
+          "V",
+          767,
+          509.28,
+          43
+        ],
+        [
+          "R",
+          742,
+          658.0943396226415,
+          null
+        ],
+        [
+          "U",
+          265,
+          -1234.4,
+          null
+        ]
+      ],
+      "date_range": [
+        [
+          258175,
+          "Lixoúri",
+          3752
+        ],
+        [
+          10295209,
+          "Faaa",
+          29719
+        ],
+        [
+          10297445,
+          "Almondsbury Interchange",
+          null
+        ],
+        [
+          10297746,
+          "Playa de Rio Real",
+          null
+        ],
+        [
+          10297834,
+          "Playa de la Mil Palmeras",
+          null
+        ],
+        [
+          10297982,
+          "La Puntica",
+          null
+        ],
+        [
+          10298339,
+          "Sokos Seurahoune",
+          null
+        ],
+        [
+          10298364,
+          "Forenom Airport",
+          null
+        ],
+        [
+          10298446,
+          "Tryp Hotel Duseldorf",
+          null
+        ],
+        [
+          10298488,
+          "Chassalla",
+          null
+        ]
+      ],
+      "region_join": [
+        [
+          "Europe & Central Asia",
+          46930,
+          7219623
+        ],
+        [
+          "North America",
+          44219,
+          1585873
+        ],
+        [
+          "East Asia & Pacific",
+          39677,
+          36890000
+        ],
+        [
+          "Latin America & Caribbean",
+          19876,
+          7989415
+        ],
+        [
+          "Middle East, North Africa, Afghanistan & Pakistan",
+          17369,
+          3043532
+        ],
+        [
+          "Sub-Saharan Africa",
+          15190,
+          10601345
+        ],
+        [
+          "South Asia",
+          14561,
+          4487379
+        ]
+      ]
+    },
+    "date_range_plan": [
+      "(3, 0, 139, 'SEARCH geonames USING INDEX idx_geonames_date (modification_date>? AND modification_date<?)')"
+    ]
+  }
+}

@@ -1,0 +1,441 @@
+{
+  "target": "postgres",
+  "sample": true,
+  "load_seconds": 71.26127210003324,
+  "tables": {
+    "regions": 0.0039059999398887157,
+    "income_levels": 0.002418600022792816,
+    "countries": 0.007899800082668662,
+    "feature_classes": 0.0017174999229609966,
+    "feature_codes": 0.009432099992409348,
+    "timezones": 0.004401300102472305,
+    "geonames": 6.882834099931642,
+    "alternate_names": 3.529815300134942,
+    "geoname_cc2": 0.15502519998699427,
+    "health_indicators": 0.14002380007877946,
+    "indicators": 0.004602800123393536,
+    "wdi_values": 60.51683420012705
+  },
+  "geonames_batch_insert_seconds": 16.39318979997188,
+  "geonames_copy_seconds": 7.087500900030136,
+  "rows": {
+    "regions": 7,
+    "income_levels": 5,
+    "countries": 245,
+    "feature_classes": 9,
+    "feature_codes": 492,
+    "timezones": 411,
+    "geonames": 199999,
+    "alternate_names": 274493,
+    "geoname_cc2": 5610,
+    "health_indicators": 5275,
+    "indicators": 345,
+    "wdi_values": 2164071
+  },
+  "storage_mb": 326.64617824554443,
+  "index_seconds": 1.4299865998327732,
+  "queries_before_index": {
+    "count": {
+      "median": 0.06293410016223788,
+      "runs": [
+        0.06293410016223788,
+        0.06461090012453496,
+        0.05390780000016093
+      ],
+      "rows": 1
+    },
+    "aggregate": {
+      "median": 0.07792109996080399,
+      "runs": [
+        0.06534600001759827,
+        0.07792109996080399,
+        0.16365440003573895
+      ],
+      "rows": 9
+    },
+    "date_range": {
+      "median": 0.04920689994469285,
+      "runs": [
+        0.04873999999836087,
+        0.04920689994469285,
+        0.05592030007392168
+      ],
+      "rows": 96
+    },
+    "region_join": {
+      "median": 0.08553869999013841,
+      "runs": [
+        0.08131789998151362,
+        0.1171220000833273,
+        0.08553869999013841
+      ],
+      "rows": 7
+    },
+    "samples": {
+      "count": [
+        [
+          199999
+        ]
+      ],
+      "aggregate": [
+        [
+          "P",
+          79180,
+          "321.1410455486542443",
+          "45694768"
+        ],
+        [
+          "S",
+          40820,
+          "382.5828701498067863",
+          "58856"
+        ],
+        [
+          "H",
+          37691,
+          "682.3611142955405250",
+          "235"
+        ],
+        [
+          "T",
+          27050,
+          "1134.1183396226415094",
+          "35947"
+        ],
+        [
+          "L",
+          7001,
+          "318.5847152126892574",
+          "501519623"
+        ],
+        [
+          "A",
+          6402,
+          "338.8315450643776824",
+          "180717495"
+        ],
+        [
+          "V",
+          767,
+          "509.2800000000000000",
+          "43"
+        ],
+        [
+          "R",
+          742,
+          "658.0943396226415094",
+          null
+        ],
+        [
+          "U",
+          265,
+          "-1234.4000000000000000",
+          null
+        ]
+      ],
+      "date_range": [
+        [
+          1764,
+          "Ad Darbāshīyah",
+          null
+        ],
+        [
+          9211,
+          "Bāstīk",
+          null
+        ],
+        [
+          29644,
+          "Khāvar-e Bālā",
+          null
+        ],
+        [
+          29654,
+          "Kūh-e Kamar Khīd",
+          null
+        ],
+        [
+          29686,
+          "Kalāteh-ye Chāhak",
+          null
+        ],
+        [
+          29691,
+          "Kūh-e Kamar Alang",
+          null
+        ],
+        [
+          30026,
+          "Cheshmeh Sefīd",
+          null
+        ],
+        [
+          32061,
+          "Eslāmābād-e Soflá",
+          null
+        ],
+        [
+          117576,
+          "Kūh-e Sangān",
+          null
+        ],
+        [
+          123128,
+          "Mozdābād-e Qadīm",
+          null
+        ]
+      ],
+      "region_join": [
+        [
+          "Europe & Central Asia",
+          46930,
+          7219623
+        ],
+        [
+          "North America",
+          44219,
+          1585873
+        ],
+        [
+          "East Asia & Pacific",
+          39677,
+          36890000
+        ],
+        [
+          "Latin America & Caribbean",
+          19876,
+          7989415
+        ],
+        [
+          "Middle East, North Africa, Afghanistan & Pakistan",
+          17369,
+          3043532
+        ],
+        [
+          "Sub-Saharan Africa",
+          15190,
+          10601345
+        ],
+        [
+          "South Asia",
+          14561,
+          4487379
+        ]
+      ]
+    },
+    "date_range_plan": [
+      "('Gather  (cost=1000.00..5645.30 rows=156 width=26) (actual time=0.308..55.337 rows=96.00 loops=1)',)",
+      "('  Workers Planned: 1',)",
+      "('  Workers Launched: 1',)",
+      "('  Buffers: shared hit=2865',)",
+      "('  ->  Parallel Seq Scan on geonames  (cost=0.00..4629.70 rows=92 width=26) (actual time=0.006..13.160 rows=48.00 loops=2)',)",
+      "(\"        Filter: ((modification_date >= '2015-06-01'::date) AND (modification_date <= '2015-06-07'::date))\",)",
+      "('        Rows Removed by Filter: 99952',)",
+      "('        Buffers: shared hit=2865',)",
+      "('Planning Time: 0.071 ms',)",
+      "('Execution Time: 55.371 ms',)"
+    ]
+  },
+  "queries_after_index": {
+    "count": {
+      "median": 0.01429279986768961,
+      "runs": [
+        0.01429279986768961,
+        0.015348499873653054,
+        0.013809100026264787
+      ],
+      "rows": 1
+    },
+    "aggregate": {
+      "median": 0.08807850000448525,
+      "runs": [
+        0.15722219995222986,
+        0.07872330001555383,
+        0.08807850000448525
+      ],
+      "rows": 9
+    },
+    "date_range": {
+      "median": 0.0005252000410109758,
+      "runs": [
+        0.0006840000860393047,
+        0.0005252000410109758,
+        0.0004755000118166208
+      ],
+      "rows": 96
+    },
+    "region_join": {
+      "median": 0.10255800001323223,
+      "runs": [
+        0.12045149994082749,
+        0.10255800001323223,
+        0.0935552001465112
+      ],
+      "rows": 7
+    },
+    "samples": {
+      "count": [
+        [
+          199999
+        ]
+      ],
+      "aggregate": [
+        [
+          "P",
+          79180,
+          "321.1410455486542443",
+          "45694768"
+        ],
+        [
+          "S",
+          40820,
+          "382.5828701498067863",
+          "58856"
+        ],
+        [
+          "H",
+          37691,
+          "682.3611142955405250",
+          "235"
+        ],
+        [
+          "T",
+          27050,
+          "1134.1183396226415094",
+          "35947"
+        ],
+        [
+          "L",
+          7001,
+          "318.5847152126892574",
+          "501519623"
+        ],
+        [
+          "A",
+          6402,
+          "338.8315450643776824",
+          "180717495"
+        ],
+        [
+          "V",
+          767,
+          "509.2800000000000000",
+          "43"
+        ],
+        [
+          "R",
+          742,
+          "658.0943396226415094",
+          null
+        ],
+        [
+          "U",
+          265,
+          "-1234.4000000000000000",
+          null
+        ]
+      ],
+      "date_range": [
+        [
+          1764,
+          "Ad Darbāshīyah",
+          null
+        ],
+        [
+          9211,
+          "Bāstīk",
+          null
+        ],
+        [
+          29644,
+          "Khāvar-e Bālā",
+          null
+        ],
+        [
+          29654,
+          "Kūh-e Kamar Khīd",
+          null
+        ],
+        [
+          29686,
+          "Kalāteh-ye Chāhak",
+          null
+        ],
+        [
+          29691,
+          "Kūh-e Kamar Alang",
+          null
+        ],
+        [
+          30026,
+          "Cheshmeh Sefīd",
+          null
+        ],
+        [
+          32061,
+          "Eslāmābād-e Soflá",
+          null
+        ],
+        [
+          117576,
+          "Kūh-e Sangān",
+          null
+        ],
+        [
+          123128,
+          "Mozdābād-e Qadīm",
+          null
+        ]
+      ],
+      "region_join": [
+        [
+          "Europe & Central Asia",
+          46930,
+          7219623
+        ],
+        [
+          "North America",
+          44219,
+          1585873
+        ],
+        [
+          "East Asia & Pacific",
+          39677,
+          36890000
+        ],
+        [
+          "Latin America & Caribbean",
+          19876,
+          7989415
+        ],
+        [
+          "Middle East, North Africa, Afghanistan & Pakistan",
+          17369,
+          3043532
+        ],
+        [
+          "Sub-Saharan Africa",
+          15190,
+          10601345
+        ],
+        [
+          "South Asia",
+          14561,
+          4487379
+        ]
+      ]
+    },
+    "date_range_plan": [
+      "('Bitmap Heap Scan on geonames  (cost=6.18..590.71 rows=184 width=26) (actual time=0.048..0.091 rows=96.00 loops=1)',)",
+      "(\"  Recheck Cond: ((modification_date >= '2015-06-01'::date) AND (modification_date <= '2015-06-07'::date))\",)",
+      "('  Heap Blocks: exact=39',)",
+      "('  Buffers: shared hit=41',)",
+      "('  ->  Bitmap Index Scan on idx_geonames_date  (cost=0.00..6.13 rows=184 width=0) (actual time=0.032..0.032 rows=96.00 loops=1)',)",
+      "(\"        Index Cond: ((modification_date >= '2015-06-01'::date) AND (modification_date <= '2015-06-07'::date))\",)",
+      "('        Index Searches: 1',)",
+      "('        Buffers: shared hit=2',)",
+      "('Planning Time: 0.090 ms',)",
+      "('Execution Time: 0.110 ms',)"
+    ]
+  }
+}
